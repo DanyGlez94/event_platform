@@ -9,13 +9,12 @@ export interface IEvent extends Document {
   imageUrl: string;
   startDateTime: Date;
   endDateTime: Date;
-  price?: string;
+  price: string;
   isFree: boolean;
   url?: string;
   category: { _id: string; name: string };
-  organizer: { _id: string; firsName: string; lastName: string };
+  organizer: { _id: string; firstName: string; lastName: string };
 }
-
 
 const EventSchema = new Schema({
   title: { type: String, required: true },
