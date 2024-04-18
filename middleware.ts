@@ -7,7 +7,6 @@ export default authMiddleware({
     '/api/webhook/clerk',
     '/api/webhook/stripe',
     '/api/uploadthing',
-    '/assets/images/logo.svg'
   ],
   ignoredRoutes: [
     '/api/webhook/clerk',
@@ -17,5 +16,5 @@ export default authMiddleware({
 });
 
 export const config = {
-  matcher: ['/((?!.+.[w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
+  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };
