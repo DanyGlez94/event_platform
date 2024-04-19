@@ -5,6 +5,13 @@ import Event from '../database/models/events.model';
 import User from '../database/models/user.model';
 import { handleError } from '../utils';
 import { CreateEventParams } from './../../types/index';
+import Category from '../database/models/category.model';
+
+export const populateEvent = async (query: any) => {
+  return query
+  .populate({ path: 'organizer', model: User, select: '_id firstName lastName' })
+  .populate({ path: 'category', model: Category, select: '_id name' });
+}
 
 export const createEvent = async ({
   event,
@@ -31,3 +38,19 @@ export const createEvent = async ({
     handleError(error);
   }
 };
+
+export const getEventById = async (eventId: string) => {
+  try {
+    await connectToDatabase();
+
+    const event = await populateEvent(Event.findById(eventId));
+
+    if (!event) {
+      throw new Error('Event not found');
+    }
+
+    return JSON.parse(JSON.stringify(event));
+  } catch (error) {
+    handleError(error);
+  }
+}
