@@ -1,4 +1,4 @@
-import { IEvent } from '@/lib/database/models/events.model';
+import { IEvent } from '@/lib/database/models/event.model';
 import { formatDateTime } from '@/lib/utils';
 import { auth } from '@clerk/nextjs';
 import Image from 'next/image';
@@ -39,9 +39,7 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
         </div>
       )}
 
-      <div
-        className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4 "
-      >
+      <div className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4 ">
         {!hidePrice && (
           <div className="flex gap-2">
             <span className="p-semibold-14 w-min rounded-full bg-green-100 px-4 py-1 text-green-700">

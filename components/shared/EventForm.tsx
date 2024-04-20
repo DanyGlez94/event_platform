@@ -27,7 +27,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { useUploadThing } from '@/lib/uploadthing';
 import { useRouter } from 'next/navigation';
 import { createEvent, updateEvent } from '@/lib/actions/event.actions';
-import { IEvent } from '@/lib/database/models/events.model';
+import { IEvent } from '@/lib/database/models/event.model';
 
 type EventFormProps = {
   userId: string;

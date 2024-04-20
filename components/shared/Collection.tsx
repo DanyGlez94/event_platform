@@ -1,4 +1,4 @@
-import { IEvent } from '@/lib/database/models/events.model';
+import { IEvent } from '@/lib/database/models/event.model';
 import Card from './Card';
 
 type CollectionProps = {

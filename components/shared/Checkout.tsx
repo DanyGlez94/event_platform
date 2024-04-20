@@ -1,4 +1,4 @@
-import { IEvent } from '@/lib/database/models/events.model';
+import { IEvent } from '@/lib/database/models/event.model';
 import { Button } from '../ui/button';
 import { loadStripe } from '@stripe/stripe-js';
 import { useEffect } from 'react';
