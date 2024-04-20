@@ -12,7 +12,7 @@ const Header = () => {
         <Link href="/" className="w-36">
           <Image
             src="/assets/images/logo.svg"
-            alt="Eventify logo"
+            alt="Evently logo"
             width={128}
             height={38}
           />
